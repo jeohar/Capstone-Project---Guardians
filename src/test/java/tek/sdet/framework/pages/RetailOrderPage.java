@@ -128,6 +128,9 @@ public class RetailOrderPage extends BaseSetup {
 	
 	@FindBy(xpath="//div[text()='Your review was added successfully']")
 	public WebElement reviewSubmitMssg;
+	
+	@FindBy(xpath="//img[@alt='Amazon Fire TV ']")
+	public WebElement AmazonFireTV;
 	}
 	
 	

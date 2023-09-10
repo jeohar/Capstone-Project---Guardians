@@ -1,20 +1,19 @@
-Feature: RetailHomePage 
+@Smoke
+Feature: RetailHomePage
 
-@verifySideBar @Smoke
-Scenario: Verify Shop by Department sidebar
-	Given User is on retail website homepage
-	When User click on All section
-	Then below options are present in Shop by Department sidebar
-	|Electronics|Computers|Smart Home|Sports|Automative|
-	
-@verifySideBarOptions @Smoke
+  @verifySideBar 
+  Scenario: Verify Shop by Department sidebar
+    Given User is on retail website homepage
+    When User click on All section
+    Then below options are present in Shop by Department sidebar
+      | Electronics | Computers | Smart Home | Sports | Automative |
+
+  @verifySideBarOptions 
   Scenario Outline: Verify department sidebar options
     When User click on All section
     And User on "<department>"
     Then below options are present in department
       | <optionOne> | <optionTwo> |
-
- 
 
     Examples: 
       | department  | optionOne                      | optionTwo                |

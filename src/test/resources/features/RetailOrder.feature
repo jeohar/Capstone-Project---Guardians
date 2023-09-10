@@ -1,3 +1,4 @@
+@Smoke
 Feature: Retail Order Page
 
   Background: 
@@ -7,7 +8,7 @@ Feature: Retail Order Page
    And User click on login button
    And User should be logged in into Account
    
-@AddItemToCart @Smoke
+@AddItemToCart 
 Scenario: Verify User can add an item to cart
    And User change the category to 'Smart Home'
    And User search for an item 'kasa outdoor smart plug'
@@ -18,7 +19,7 @@ Scenario: Verify User can add an item to cart
    Then the cart icon quantity should change to '2'
    And User cleans the cart before moving on
     
- @PlaceOrder @Smoke
+ @PlaceOrder 
  Scenario: Verify User can place an order with Shipping address and payment Method on file
     And User change the category to 'Electronics' Apex Legends
     And User search for an item 'Apex Legends' Apex Legends
@@ -31,8 +32,16 @@ Scenario: Verify User can add an item to cart
     And User click on Proceed to Checkout button
     And User click on Place Your Order
     Then A message should be displayed 'Order Placed, Thanks'
-    
-	@CancelTheOrder @Smoke
+    #extra steps
+    Then User search for item named 'Amazon Fire TV'
+    And User click on Search icon
+    And User click on item AmazonTV
+    And User click add to Cart button
+    And User click on Cart option
+    And User click on Proceed to Checkout button
+    And User click on Place Your Order
+    Then A message should be displayed 'Order Placed, Thanks'
+	@CancelTheOrder 
   Scenario: Verify User can cancel the order
     And User click on Orders section
     And User click on first order in list
@@ -41,7 +50,7 @@ Scenario: Verify User can add an item to cart
     And User click on Cancel Order button
     Then a cancelation message should be displayed 'Your OrderS Has Been Cancelled'
     
-  @ReturnTheOrder @Smoke
+  @ReturnTheOrder 
   Scenario: Verify User can Return the order
     And User click on Orders section on page
     And User click on first order in list on page
@@ -51,7 +60,7 @@ Scenario: Verify User can add an item to cart
     And User click on Return Order button
     Then a cancelation message should be displayed 'Return was successfull'
     
-  @WriteAReview @Smoke
+  @WriteAReview 
   Scenario: Verify User can write a review on order placed
     And User click on Orders section on home
     And User click on first order in list on first page
