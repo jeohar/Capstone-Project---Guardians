@@ -7,12 +7,14 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 
-import tek.bdd.guardians.config.Browser;
-import tek.bdd.guardians.config.ChromeBrowser;
-import tek.bdd.guardians.config.ChromeHeadless;
-import tek.bdd.guardians.config.EdgeBrowser;
-import tek.bdd.guardians.config.FireFoxBrowser;
-import tek.bdd.guardians.utilities.ReadYamlFiles;
+import tek.sdet.framework.config.Browser;
+import tek.sdet.framework.config.ChromeBrowser;
+import tek.sdet.framework.config.ChromeHeadless;
+import tek.sdet.framework.config.EdgeBrowser;
+import tek.sdet.framework.config.FireFoxBrowser;
+import tek.sdet.framework.utilities.ReadYamlFiles;
+
+
 
 public class BaseSetup {
 	
